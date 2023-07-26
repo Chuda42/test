@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const Config = { SERVER_PORT: 3000 }; // Asume que SERVER_PORT está definido correctamente en tu código.
+const Config = { SERVER_PORT: process.env.PORT }; // Asume que SERVER_PORT está definido correctamente en tu código.
 
-app.get('/hola', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Hola Mundo');
 });
 
